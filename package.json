@@ -1,7 +1,7 @@
 {
   "name": "team-profile-gen",
   "version": "1.0.0",
-  "description": "",
+  "description": "Prompts user for Member info, then generates a profile.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Myuze/team-profile-gen.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Florian Meneses",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Myuze/team-profile-gen/issues"
