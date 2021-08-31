@@ -9,17 +9,17 @@ describe('Employee', () => {
 
   describe('Properties', () => {
     it('Should have the property "name", as a string', () => {
-      expect(member.name).toEqual('Gorge');
+      expect(member.name).toEqual(memName);
       expect(typeof(member.name)).toBe('string');
     });
     
     it('Should have the property "id", as a number', () => {
-      expect(member.id).toEqual(1);
+      expect(member.id).toEqual(memId);
       expect(typeof(member.id)).toBe('number');
     });
     
     it('Should have the property "email", as a string', () => {
-      expect(member.email).toEqual('gorge@gmail.com');
+      expect(member.email).toEqual(memEmail);
       expect(typeof(member.email)).toBe('string');
     });
   });
