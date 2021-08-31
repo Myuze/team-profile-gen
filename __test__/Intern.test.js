@@ -4,8 +4,9 @@ describe('Intern', () => {
   const memName = 'Shigu';
   const memId = 1;
   const memEmail = 'shigu@gmail.com';
+  const memSchool = 'DeVry';
 
-  const member = new Intern(memName, memId, memEmail);
+  const member = new Intern(memName, memId, memEmail, memSchool);
 
   describe('Properties', () => {
     it('Should have the property "name", as a string', () => {
@@ -21,6 +22,11 @@ describe('Intern', () => {
     it('Should have the property "email", as a string', () => {
       expect(member.email).toEqual(memEmail);
       expect(typeof(member.email)).toBe('string');
+    });
+
+    it('Should have the property "school", as a string', () => {
+      expect(member.school).toEqual(memSchool);
+      expect(typeof(member.school)).toBe('string');
     });
   });
 
@@ -41,6 +47,12 @@ describe('Intern', () => {
       const result = member.getEmail(memEmail);
 
       expect(result).toEqual(memEmail);
+    });
+
+    it('Should have the method "getSchool", which returns the "school" value.', () => {
+      const result = member.getSchool();
+
+      expect(result).toEqual(memSchool);
     });
     
     it('Should have the method "getRole", which returns the role "Intern" value, as a string.', () => {

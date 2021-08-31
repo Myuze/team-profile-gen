@@ -4,8 +4,9 @@ describe('Engineer', () => {
   const memName = 'Shigu';
   const memId = 1;
   const memEmail = 'shigu@gmail.com';
+  const memGithub = 'GitUserName'
 
-  const member = new Engineer(memName, memId, memEmail);
+  const member = new Engineer(memName, memId, memEmail, memGithub);
 
   describe('Properties', () => {
     it('Should have the property "name", as a string', () => {
@@ -21,6 +22,11 @@ describe('Engineer', () => {
     it('Should have the property "email", as a string', () => {
       expect(member.email).toEqual(memEmail);
       expect(typeof(member.email)).toBe('string');
+    });
+
+    it('Should have the property "github", as a string', () => {
+      expect(member.github).toEqual(memGithub);
+      expect(typeof(member.github)).toBe('string');
     });
   });
 
@@ -41,6 +47,13 @@ describe('Engineer', () => {
       const result = member.getEmail(memEmail);
 
       expect(result).toEqual(memEmail);
+    });
+
+    it('Should have the method "getGithub", which returns the Github username', () => {
+      const result = member.getGithub();
+
+      expect(result).toEqual(memGithub);
+      expect(typeof(result)).toBe('string');
     });
     
     it('Should have the method "getRole", which returns the role "Engineer" value, as a string.', () => {

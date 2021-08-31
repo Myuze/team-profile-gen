@@ -4,8 +4,9 @@ describe('Manager', () => {
   const memName = 'Shigu';
   const memId = 1;
   const memEmail = 'shigu@gmail.com';
+  const memOfficeNum = 555
 
-  const member = new Manager(memName, memId, memEmail);
+  const member = new Manager(memName, memId, memEmail, memOfficeNum);
 
   describe('Properties', () => {
     it('Should have the property "name", as a string', () => {
@@ -22,6 +23,11 @@ describe('Manager', () => {
       expect(member.email).toEqual(memEmail);
       expect(typeof(member.email)).toBe('string');
     });
+
+    it('Should have the property "officeNumber", as a number', () => {
+      expect(member.officeNumber).toEqual(memOfficeNum);
+      expect(typeof(member.officeNumber)).toBe('number');
+    })
   });
 
   describe('Methods', () => {
