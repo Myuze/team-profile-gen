@@ -29,10 +29,26 @@ var testObject = [
   },
   {
     teamName: "Myuze's Team",
+    memberName: 'Alice Nguyen',
+    id: '2',
+    email: 'awonder@gmail.com',
+    role: 'Engineer',
+    github: 'aliceinwonderland'
+  },
+  {
+    teamName: "Myuze's Team",
     memberName: 'Michael Rogers',
     id: '3',
     email: 'mrogers@gmail.com',
     role: 'Intern',
     school: 'Davis'
+  },
+  {
+    teamName: "Myuze's Team",
+    memberName: 'Julian Williams',
+    id: '3',
+    email: 'jwill@gmail.com',
+    role: 'Intern',
+    school: 'Berkeley'
   }
 ]

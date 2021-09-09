@@ -53,14 +53,14 @@ class Questions {
     ];
   }
 
-  async collectInputs(inputs = []) {
+  #collectInputs = async (inputs = []) => {
     const { repeat, ...answers } = await prompt(this.questions);
     const newInputs = [...inputs, answers];
-    return repeat ? this.collectInputs(newInputs) : newInputs;
+    return repeat ? this.#collectInputs(newInputs) : newInputs;
   };
 
   async getResponse() {
-    this.response = await this.collectInputs();
+    this.response = await this.#collectInputs();
     return this.response;
   };
 
