@@ -1,6 +1,6 @@
 const { Questions } = require('./src/Questions');
-const { RenderCard } = require('./src/RenderCard');
-const { RenderHTML } = require('./src/RenderHTML');
+const RenderCard = require('./src/RenderCard');
+const { createHTML } = require('./src/RenderHTML');
 const parseEmployee = require('./lib/parseEmployee');
 
 const question = new Questions();

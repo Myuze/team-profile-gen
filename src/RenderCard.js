@@ -8,3 +8,5 @@ class RenderCard {
     this.employeeObject
   }
 }
+
+module.exports = RenderCard;
