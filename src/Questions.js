@@ -67,6 +67,4 @@ class Questions {
   logResponse() { console.log('Questions response: ', this.response) };
 }
 
-module.exports = {
-  Questions
-}
+module.exports = Questions;
