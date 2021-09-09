@@ -11,12 +11,16 @@
 }
 
 body {
+  display: flex;
+  flex-flow: column nowrap;
   font-family: var(--def-fnt);
   background-color: var(--bg-clr);
   color: var(--txt-clr);
 }
 
 header {
+  padding: 2em 0;
+  text-align: center;
   background-color: rebeccapurple;
   color: white;
 }
