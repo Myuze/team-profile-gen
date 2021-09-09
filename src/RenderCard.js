@@ -1,9 +1,10 @@
 class RenderCard {
-  constructor(Employee) {
-    this.Employee = Employee;
+  constructor(employeeObject) {
+    this.employeeName = employeeObject.memberName;
+    this
   }
 
-  // createCard() {
-  //   this.Employee.
-  // }
+  createCard() {
+    this.employeeObject
+  }
 }

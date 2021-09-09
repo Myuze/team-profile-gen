@@ -1,13 +1,16 @@
 const { Questions } = require('./src/Questions');
+const { RenderCard } = require('./src/RenderCard');
 const { RenderHTML } = require('./src/RenderHTML');
+const parseEmployee = require('./lib/parseEmployee');
+
 const question = new Questions();
 const HTMLPath = './src/index.html';
 
-question.getResponse()
-.then((response) => {
-  console.info('index response: ', response)
+// question.getResponse()
+// .then((response) => {
+//   console.info('index response: ', response)
   
-}).catch((error) => error ? console.log(new Error(error)): console.log('SUCCESS'));
+// }).catch((error) => error ? console.log(new Error(error)): console.log('SUCCESS'));
 
 // TEST OBJECT
 var testObject = [
@@ -52,3 +55,13 @@ var testObject = [
     school: 'Berkeley'
   }
 ]
+
+var empArray = [];
+testObject.forEach(member => {
+  console.log(member)
+  var empClass = parseEmployee(member);
+  empArray.push(empClass)
+
+});
+
+console.log(empArray)
