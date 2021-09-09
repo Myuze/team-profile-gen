@@ -1,0 +1,22 @@
+:root {
+  --bg-clr: black;
+  --txt-clr: aqua;
+  --def-fnt: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--def-fnt);
+  background-color: var(--bg-clr);
+  color: var(--txt-clr);
+}
+
+header {
+  background-color: rebeccapurple;
+  color: white;
+}

@@ -1,6 +1,6 @@
-const { Questions } = require('./src/Questions');
-const { RenderCard } = require('./src/RenderCard');
-const { createHTML } = require('./src/RenderHTML');
+const Questions = require('./src/Questions');
+const RenderCard = require('./src/RenderCard');
+const RenderHTML = require('./src/RenderHTML');
 const parseEmployee = require('./lib/parseEmployee');
 
 const question = new Questions();
@@ -56,12 +56,15 @@ var testObject = [
   }
 ]
 
-var empArray = [];
-testObject.forEach(member => {
-  console.log(member)
-  var empClass = parseEmployee(member);
-  empArray.push(empClass)
+const render = new RenderHTML();
+render.createHTML();
 
-});
+// var empArray = [];
+// testObject.forEach(member => {
+//   console.log(member)
+//   var empClass = parseEmployee(member);
+//   empArray.push(empClass)
 
-console.log(empArray)
+// });
+
+// console.log(empArray)

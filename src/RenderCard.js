@@ -1,7 +1,11 @@
-class RenderCard extends RenderHTML {
+const RenderHTML = require('./RenderHTML');
+
+class RenderCard {
   constructor(employeeObject) {
-    super()
     this.employeeName = employeeObject.memberName;
+    this.cardHeader = `<div class='card-header'></div>`
+    this.cardContent = `<div class='card-contents></div>`
+    this.cardHTML = ``;
   }
 
   renderCards(employeeArray) {
