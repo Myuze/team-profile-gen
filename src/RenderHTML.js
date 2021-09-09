@@ -1,3 +1,4 @@
+var teamSectionHTML = 'test'
 const HTMLindex = 
 `<!DOCTYPE html>
 <html lang="en">
