@@ -16,7 +16,7 @@ function renderCardsHTML(employeeArray) {
 
       case 'Engineer':
         roleSpecificClass = `github'>Github Username: `;
-        roleSpecificItem = `<a href="https://github.com/${employee.github}">${employee.github}</a>`;
+        roleSpecificItem = `<a href="https://github.com/${employee.github}" target="_blank">${employee.github}</a>`;
         break;
 
       case 'Intern':
