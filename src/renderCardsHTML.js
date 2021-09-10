@@ -1,28 +1,37 @@
-const parseEmployee = require('../lib/parseEmployee');
-
 function renderCardsHTML(employeeArray) {
-  if (!employeeArray) return;
+  if (!typeof(employeeArray) === 'Array') return 'Array not provided.';
   
-  parseEmployee(employeeArray)
-
-  const cardHeader = `<div class='card-header'>\n\t${employeeArray.name}\n${employeeArray.role}</div>`;
-  const cardContent = `<div class='card-contents>`;
-  const cardHTML = ``;
-
+  let cardsHTML = ``;
+  
   employeeArray.forEach(employee => {
-    var role = employee.getRole();
-
+    const role = employee.getRole();
+    let roleSpecificItem = ``;
+    let roleSpecificClass = '';
+  
     switch (role) {
       case 'Manager':
+        roleSpecificClass = `office-num'>Office #: `;
+        roleSpecificItem = employee.officeNumber;
         break;
+
       case 'Engineer':
+        roleSpecificClass = `github'>Github Username: `;
+        roleSpecificItem = employee.github;
         break;
+
       case 'Intern':
+        roleSpecificClass = `school'>School: `;
+        roleSpecificItem = employee.school;
         break;
-      case 'Employee':
-        break;
+
+      default:
+        console.log('Invalid Role');
     };
+
+    cardsHTML += `<div class='card-container'>\n\t<div class='card'>\n\t<div class='card-header'>\n\t<h2>${employee.name}</h2>\n<h3>${employee.getRole()}</h3>\n</div><div class='card-contents'>\n\t<ul>\n\t<li class='id'>ID: ${employee.id}</li>\n<li class='email'>Email: ${employee.email}</li>\n<li class='${roleSpecificClass}${roleSpecificItem}\n</ul>\n</div>\n</div>\n</div>\n`
   });
+
+  return cardsHTML;
 };
 
 function testCard() {

@@ -25,7 +25,7 @@ var testObject = [
   },
   {
     teamName: "Myuze's Team",
-    memberName: 'Evalyn Nguyen',
+    memberName: 'Evelyn Nguyen',
     id: '2',
     email: 'lotus@gmail.com',
     role: 'Engineer',
@@ -57,8 +57,9 @@ var testObject = [
   }
 ]
 
-// Create Employees classes based on role
+// Create an array of Employee classes based on role
 var empArray = [];
+
 testObject.forEach(member => {
   var empClass = parseEmployee(member);
   empArray.push(empClass)
@@ -74,4 +75,3 @@ const htmlBody = body.addContent();
 // Create Team Profile HTML
 const render = new RenderHTML(htmlBody);
 render.createHTML();
-W
