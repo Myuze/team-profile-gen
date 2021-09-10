@@ -29,7 +29,7 @@ var testObject = [
     id: '2',
     email: 'lotus@gmail.com',
     role: 'Engineer',
-    github: 'ironwoodlotus'
+    github: 'ENguyen25'
   },
   {
     teamName: "Myuze's Team",
@@ -37,7 +37,7 @@ var testObject = [
     id: '2',
     email: 'awonder@gmail.com',
     role: 'Engineer',
-    github: 'aliceinwonderland'
+    github: 'mrogers23458'
   },
   {
     teamName: "Myuze's Team",
