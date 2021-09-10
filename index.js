@@ -4,10 +4,13 @@ const RenderBodyHTML = require('./src/RenderBodyHTML');
 const RenderHTML = require('./src/RenderHTML');
 const parseEmployee = require('./lib/parseEmployee');
 
-const question = new Questions();
+const Question = new Questions();
+const Body = new RenderBodyHTML();
+const Render = new RenderHTML();
+
 const HTMLPath = './src/index.html';
 
-// question.getResponse()
+// Question.getResponse()
 // .then((response) => {
 //   console.info('index response: ', response)
   
@@ -69,9 +72,7 @@ testObject.forEach(member => {
 const htmlCards = renderCardsHTML(empArray);
 
 // Create HTML body and add employee cards
-const body = new RenderBodyHTML(htmlCards);
-const htmlBody = body.addContent();
+const htmlBody = Body.addContent(htmlCards);
 
 // Create Team Profile HTML
-const render = new RenderHTML(htmlBody);
-render.createHTML();
+Render.createHTML(htmlBody);

@@ -1,26 +1,15 @@
 const fs = require('fs');
 
 class RenderHTML {
-  constructor(bodyHTML) {
-    this.headHTML =
-`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <title>Team Profile</title>
-</head>\n`;
-    this.bodyHTML = bodyHTML;
+  constructor() {
+    this.headHTML = `<!DOCTYPE html>\n<html lang="en">\n<head>\n\t<meta charset="UTF-8">\n\t<meta http-equiv="X-UA-Compatible" content="IE=edge">\n\t<meta name="viewport" content="width=device-width, initial-scale=1.0">\n\t<link rel="preconnect" href="https://fonts.googleapis.com">\n\t<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n\t<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">\n\t<link rel="stylesheet" href="styles.css">\n\t<title>Team Profil</title>\n</head>\n`;
+    this.bodyHTML = ``;
     this.endHTML = `\n</html>`;
     this.completeHTML = ``;
   };
 
-  createHTML() {
+  createHTML(bodyHTML) {
+    this.bodyHTML = bodyHTML;
     this.completeHTML += this.headHTML;
     this.completeHTML += this.bodyHTML;
     this.completeHTML += this.endHTML;  

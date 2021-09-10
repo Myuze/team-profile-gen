@@ -1,12 +1,11 @@
 class RenderBodyHTML {
-  constructor(bodyHTMLContent) {
-    this.bodyHTMLContent = bodyHTMLContent;
+  constructor() {
+    this.bodyHTMLContent = ``;
   };
 
-  addContent() {
-    const body = `<body>\n\t<header><h1>My Team</h1></header>\n${this.bodyHTMLContent}\n</body>`;
-
-    return body;
+  addContent(bodyHTMLContent) {
+    this.bodyHTMLContent = bodyHTMLContent;
+    return `<body>\n\t<header><h1>My Team</h1></header>\n${this.bodyHTMLContent}\n</body>`;
   };
 };
 
