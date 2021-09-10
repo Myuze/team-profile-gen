@@ -1,7 +1,7 @@
 function renderCardsHTML(employeeArray) {
   if (!typeof(employeeArray) === 'Array') return 'Array not provided.';
   
-  let cardsHTML = ``;
+  let cardsHTML = `\t<div class='card-container'>`;
   
   employeeArray.forEach(employee => {
     const role = employee.getRole();
@@ -16,7 +16,7 @@ function renderCardsHTML(employeeArray) {
 
       case 'Engineer':
         roleSpecificClass = `github'>Github Username: `;
-        roleSpecificItem = employee.github;
+        roleSpecificItem = `<a href="https://github.com/${employee.github}">${employee.github}</a>`;
         break;
 
       case 'Intern':
@@ -28,10 +28,10 @@ function renderCardsHTML(employeeArray) {
         console.log('Invalid Role');
     };
 
-    cardsHTML += `<div class='card-container'>\n\t<div class='card'>\n\t<div class='card-header'>\n\t<h2>${employee.name}</h2>\n<h3>${employee.getRole()}</h3>\n</div><div class='card-contents'>\n\t<ul>\n\t<li class='id'>ID: ${employee.id}</li>\n<li class='email'>Email: ${employee.email}</li>\n<li class='${roleSpecificClass}${roleSpecificItem}\n</ul>\n</div>\n</div>\n</div>\n`
+    cardsHTML += `\n\t\t<div class='card'>\n\t\t\t<div class='card-header'>\n\t\t\t\t<h2>${employee.name}</h2>\n\t\t\t\t<h3>${employee.getRole()}</h3>\n\t\t\t</div>\n\t\t\t<div class='card-contents'>\n\t\t\t\t<ul>\n\t\t\t\t\t<li class='id'>ID: ${employee.id}</li>\n\t\t\t\t\t<li class='email'>Email: <a href="mailto:${employee.email}">${employee.email}</a></li>\n\t\t\t\t\t\<li class='${roleSpecificClass}${roleSpecificItem}</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\t`
   });
 
-  return cardsHTML;
+  return cardsHTML + `\n\t</div>`;
 };
 
 function testCard() {
