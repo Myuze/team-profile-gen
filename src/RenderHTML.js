@@ -14,7 +14,7 @@ class RenderHTML {
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Team Profile</title>
-</head>`;
+</head>\n`;
     this.bodyHTML = bodyHTML;
     this.endHTML = `\n</html>`;
     this.completeHTML = ``;

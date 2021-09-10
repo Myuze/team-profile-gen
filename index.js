@@ -1,5 +1,6 @@
 const Questions = require('./src/Questions');
-const RenderCard = require('./src/RenderCard');
+const renderCardsHTML = require('./src/renderCardsHTML');
+const RenderBodyHTML = require('./src/RenderBodyHTML');
 const RenderHTML = require('./src/RenderHTML');
 const parseEmployee = require('./lib/parseEmployee');
 
@@ -56,15 +57,21 @@ var testObject = [
   }
 ]
 
-const render = new RenderHTML();
+// Create Employees classes based on role
+var empArray = [];
+testObject.forEach(member => {
+  var empClass = parseEmployee(member);
+  empArray.push(empClass)
+});
+
+// Create Employee Cards 
+const htmlCards = renderCardsHTML(empArray);
+
+// Create HTML body and add employee cards
+const body = new RenderBodyHTML(htmlCards);
+const htmlBody = body.addContent();
+
+// Create Team Profile HTML
+const render = new RenderHTML(htmlBody);
 render.createHTML();
-
-// var empArray = [];
-// testObject.forEach(member => {
-//   console.log(member)
-//   var empClass = parseEmployee(member);
-//   empArray.push(empClass)
-
-// });
-
-// console.log(empArray)
+W
