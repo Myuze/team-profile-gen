@@ -28,7 +28,7 @@ function renderCardsHTML(employeeArray) {
         console.log('Invalid Role');
     };
 
-    cardsHTML += `\n\t\t<div class='card${' ' + role.toLowerCase()}'>\n\t\t\t<div class='card-header'>\n\t\t\t\t<h2>${employee.name}</h2>\n\t\t\t\t<h3>${role}</h3>\n\t\t\t</div>\n\t\t\t<div class='card-contents'>\n\t\t\t\t<ul>\n\t\t\t\t\t<li class='id'>ID: ${employee.id}</li>\n\t\t\t\t\t<li class='email'>Email: <a href="mailto:${employee.email}">${employee.email}</a></li>\n\t\t\t\t\t\<li class='${roleSpecificClass}${roleSpecificItem}</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\t`
+    cardsHTML += `\n\t\t<div class='card'>\n\t\t\t<div class='card-header'>\n\t\t\t\t<h2>${employee.name}</h2>\n\t\t\t\t<h3>${employee.getRole()}</h3>\n\t\t\t</div>\n\t\t\t<div class='card-contents'>\n\t\t\t\t<ul>\n\t\t\t\t\t<li class='id'>ID: ${employee.id}</li>\n\t\t\t\t\t<li class='email'>Email: <a href="mailto:${employee.email}">${employee.email}</a></li>\n\t\t\t\t\t\<li class='${roleSpecificClass}${roleSpecificItem}</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\t`
   });
 
   return cardsHTML + `\n\t</div>`;

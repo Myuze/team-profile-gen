@@ -12,12 +12,10 @@
 
 a {
   text-decoration: none;
-  color: magenta;
 }
 
 li {
   list-style-type: none;
-  color: greenyellow;
 }
 
 body {
@@ -29,63 +27,27 @@ body {
 }
 
 header {
-  margin-bottom: 2rem;
-  padding: 2rem 0;
+  margin-bottom: 2em;
+  padding: 2em 0;
   text-align: center;
-  font-size: x-large;
   background-color: rebeccapurple;
   color: white;
 }
 
 .card-container {
-  width: 100%;
+  margin: 1em;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  flex-flow: row wrap;
 }
 
 .card {
-  flex: 1 1 100%;
-  min-height: 20vh;
-  margin: 1rem;
-  padding: 1rem;
+  padding: 1em;
   border: solid 2px;
   border-radius: 20px;
 }
 
 .card-contents {
-  margin: auto;
-  padding: 1rem 0;
+  padding: 1em 0;
   font-family: monospace;
 }
-
-@media screen and (min-width: 426px) {
-  
-  .card-container {
-    width: 100%;
-    margin: 1rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
-
-  .card {
-    flex: 0 0 25%;
-    min-height: 20vh;
-    margin: 1rem;
-    padding: 1rem;
-    border: solid 2px;
-    border-radius: 20px;
-  }
-
-  .card-contents {
-    margin: auto;
-    padding: 1rem 0;
-    font-family: monospace;
-  }
-
-  .manager {
-    flex: 0 1 25%;
-  }
- }
 
