@@ -3,6 +3,8 @@
   --txt-clr: aqua;
   --head-fnt: 'Michroma', sans-serif;
   --def-fnt: 'Roboto', sans-serif;
+  --data-head-fnt: greenyellow;
+  --data-link-fnt: orangered;
 }
 
 * {
@@ -13,12 +15,12 @@
 
 a {
   text-decoration: none;
-  color: orangered;
+  color: var(--data-link-fnt);
 }
 
 li {
   list-style-type: none;
-  color: greenyellow;
+  color: var(--data-head-fnt);
 }
 
 body {
@@ -62,7 +64,6 @@ header {
 }
 
 @media screen and (min-width: 426px) {
-  
   .card-container {
     width: 100%;
     margin: 1rem;

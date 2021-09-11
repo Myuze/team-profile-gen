@@ -1,3 +1,4 @@
+// Class to render the base Team Profile HTML
 const fs = require('fs');
 
 class RenderHTML {

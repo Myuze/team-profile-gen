@@ -1,3 +1,4 @@
+  // Prompt for Team Member data recursively using Inquirer as they confirm to add members
 const inquirer = require('inquirer');
 const prompt = inquirer.createPromptModule();
 

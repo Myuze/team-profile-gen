@@ -1,3 +1,4 @@
+// Class to render Team Profile body HTML
 class RenderBodyHTML {
   constructor() {
     this.bodyHTMLContent = ``;

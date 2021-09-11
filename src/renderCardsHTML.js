@@ -1,3 +1,4 @@
+// Function to create card HTML for each employee object in an array
 function renderCardsHTML(employeeArray) {
   if (!typeof(employeeArray) === 'Array') return 'Array not provided.';
   
