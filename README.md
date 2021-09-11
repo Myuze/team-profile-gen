@@ -6,6 +6,8 @@
 ---
 This is an application I built to dynamically generate a Team Profile.
 
+### https://github.com/Myuze/team-profile-gen
+---
 ![Team Profile](team_profile.jpg)
 
 ## Table of Contents:
