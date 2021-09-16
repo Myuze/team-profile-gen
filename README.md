@@ -26,14 +26,13 @@ This is an application I built to dynamically generate a Team Profile.
 1. Install, `node.js`.
 2. Clone the application repository.
 3. In the repository root, in the CLI, `npm install`.
-4. Then, `node index.js`.
-5. Follow the prompts.
 
 
 ## Usage:
 
 ---
-You are welcome to use this application as needed.
+1. From the CLI use, `node index.js`.
+2. Follow the prompts.
 
 ## Test Instructions:
 
