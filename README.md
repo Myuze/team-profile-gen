@@ -31,13 +31,14 @@ This is an application I built to dynamically generate a Team Profile.
 ## Usage:
 
 ---
+From the repository directory:
 1. From the CLI use, `node index.js`.
 2. Follow the prompts.
 
 ## Test Instructions:
 
 ---
-From the repository:
+From the repository directory:
 1. In the CLI, `npm run test`.
 
 ## Contribute:
