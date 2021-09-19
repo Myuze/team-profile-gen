@@ -5,7 +5,7 @@
 
 ---
 This is an application I built to dynamically generate a Team Profile.
-
+### [Video Walkthrough](https://drive.google.com/file/d/1INl1lZIC6A9p9A48CA_0fosg8XgCDG3s/view)
 ### https://github.com/Myuze/team-profile-gen
 ---
 ![Team Profile](team_profile.jpg)
